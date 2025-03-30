@@ -8,6 +8,7 @@ import Internships from "@/sections/Internships";
 import { ContactSection } from "@/sections/Contact"
 import { TapeSection } from "@/sections/Tape";
 import { InfiniteImageScroll } from "@/sections/Scroll";
+import Navbar from "@/sections/FullNav";
 
 const navItems = [
   { name: "Overview", link: "#overview" },
@@ -20,12 +21,13 @@ const navItems = [
 export default function Home() {
   return (
     <div>
-      <FloatingNav navItems={navItems} />
+      {/*<FloatingNav navItems={navItems} />*/}
+      <Navbar />
       <HeroSection />
       <div className='relative z-0 flex flex-col items-center justify-center mx-auto '>
         <Roles idName="roles" />
         {/*<TapeSection/>*/}
-        <Internships idName="work" />
+        <Internships idName="work"/>
       </div>
       <ProjectsSection />
       {/* Grid Bento */}

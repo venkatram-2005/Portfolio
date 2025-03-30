@@ -156,7 +156,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience, index }) =>
 const Internships = () => {
   return (
     <section id="internships">
-      <div>
+      <div className="mt-20">
         <motion.div variants={textVariant(0.1)}>
           <SectionHeader
             eyebrow="What have I done so far ?"

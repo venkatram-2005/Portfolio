@@ -67,10 +67,6 @@ const toolboxItems = [
     iconType: GitIcon,
   },
   {
-    title: "React Native",
-    iconType: ReactIcon,
-  },
-  {
     title: "Java",
     iconType: JavaIcon,
   },
