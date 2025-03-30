@@ -88,7 +88,7 @@ const Navbar: React.FC = () => {
                     <Icon
                         className="w-7 h-7 cursor-pointer"
                         onClick={() => setToggle(!toggle)}
-                    />;
+                    />
 
                     <div
                         className={`${!toggle ? "hidden" : "flex"
