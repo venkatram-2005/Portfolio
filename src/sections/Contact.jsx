@@ -5,8 +5,7 @@ import grainImage from "@/assets/images/grain.jpg";
 
 export const ContactSection = () => {
   const handleClick = () => {
-    window.location.href =
-      "mailto:vallurivenkatram@gmail.com?subject=Contact Request";
+    window.open("https://www.linkedin.com/in/valluri-venkatram")
   };
 
   return (
