@@ -7,7 +7,6 @@ import HTMLIcon from "@/assets/icons/html5.svg";
 import JavaIcon from "@/assets/icons/java.svg";
 import NodeJsIcon from "@/assets/icons/node.svg";
 import ReactIcon from "@/assets/icons/react.svg";
-import RustIcon from "@/assets/icons/rust.svg";
 import SQLIcon from "@/assets/icons/sql.svg";
 import JavaScriptIcon from "@/assets/icons/square-js.svg";
 import SmileEmoji from "@/assets/images/memoji-smile.png";
@@ -23,6 +22,16 @@ import Image from "next/image";
 import { useRef } from "react";
 
 import "@/app/about.css";
+import { FaHackerrank } from "react-icons/fa";
+import { SiLeetcode, SiCodechef, SiGeeksforgeeks } from "react-icons/si";
+
+const profiles = [
+  { name: "HackerRank", icon: <FaHackerrank className="text-green-500 text-2xl" />, link: "https://www.hackerrank.com/profile/venkatram_2005" },
+  { name: "LeetCode", icon: <SiLeetcode className="text-yellow-500 text-2xl" />, link: "https://leetcode.com/u/venkatram_2005/" },
+  //{ name: "CodeChef", icon: <SiCodechef className="text-gray-500 text-2xl" />, link: "https://www.codechef.com/" },
+  { name: "GeeksforGeeks", icon: <SiGeeksforgeeks className="text-green-700 text-2xl" />, link: "https://www.geeksforgeeks.org/user/22501ansdn/" },
+];
+
 
 const toolboxItems = [
   {
@@ -125,13 +134,19 @@ export const AboutSection = () => {
                 title="My Profiles"
                 description="Explore my coding profiles"
               />
-              <div className="book mx-auto mt-2 w-40 md:mt-0">
-                <Image
-                  width={80}
-                  height={80}
-                  alt="The Outstanding Developer by Sebastien Castiel"
-                  src="https://m.media-amazon.com/images/I/51E2055ZGUL._SY466_.jpg"
-                />
+              <div className="grid grid-cols-3 gap-2 p-2">
+                {profiles.slice(0, 3).map((profile) => (
+                  <a
+                    key={profile.name}
+                    href={profile.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center justify-center p-4 rounded-2xl hover:shadow-lg transition"
+                  >
+                    <div className="flex items-center justify-center w-16 h-16">{profile.icon}</div>
+                    <span className="mt-2 font-semibold text-white text-sm">{profile.name}</span>
+                  </a>
+                ))}
               </div>
             </Card>
             <Card className="h-[320px] md:col-span-3 lg:col-span-2">

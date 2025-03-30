@@ -22,11 +22,10 @@ export const ContactSection = () => {
           <div className="flex flex-col items-center gap-8 md:flex-row md:gap-16">
             <div className="">
               <h2 className="font-serif text-2xl md:text-3xl">
-                Let&apos;s create something amazing together.
+              Looking for exciting opportunities to collaborate and work on real-time solutions.
               </h2>
               <p className="mt-2 text-sm md:text-base">
-                Ready to bring your next project to life? Let&apos;s connect and
-                discuss how I can help you achieve your goals.
+               Open to roles where I can contribute, innovate, and grow—let&apos;s connect!
               </p>
             </div>
             <div>

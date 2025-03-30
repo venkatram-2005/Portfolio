@@ -5,12 +5,14 @@ import { FloatingNav } from "@/components/NavBar";
 import { Footer } from "@/sections/Footer";
 import Roles from "@/sections/Roles";
 import Internships from "@/sections/Internships";
-import {ContactSection} from "@/sections/Contact"
+import { ContactSection } from "@/sections/Contact"
+import { TapeSection } from "@/sections/Tape";
+import { InfiniteImageScroll } from "@/sections/Scroll";
 
 const navItems = [
   { name: "Overview", link: "#overview" },
   { name: "Internships", link: "#internships" },
-  { name: "Projects", link: "#projects" },
+  { name: "Projects", link: "#project" },
   { name: "About", link: "#about" },
   { name: "Contact", link: "#contact" },
 ];
@@ -22,13 +24,13 @@ export default function Home() {
       <HeroSection />
       <div className='relative z-0 flex flex-col items-center justify-center mx-auto '>
         <Roles idName="roles" />
-      </div>
-      <div className='relative z-0'>
+        {/*<TapeSection/>*/}
         <Internships idName="work" />
       </div>
       <ProjectsSection />
       {/* Grid Bento */}
       <AboutSection />
+      {/*<InfiniteImageScroll/>*/}
       <ContactSection />
       <Footer />
     </div>

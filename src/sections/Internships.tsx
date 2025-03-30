@@ -14,6 +14,7 @@ import { textVariant } from "../lib/motion";
 import aicte from "../assets/company/aicte.png";
 import motioncut from "../assets/company/motioncut.png";
 import springboard from "../assets/company/springboard.png";
+import SectionHeader from "@/components/SectionHeader";
 
 // Dynamic imports with ssr: false
 const VerticalTimeline = dynamic(
@@ -28,16 +29,16 @@ const VerticalTimelineElement = dynamic(
 
 const experiences = [
   {
-    title: "AWS Data Engineering",
-    company_name: "AICTE",
-    icon: aicte,
-    iconBg: "#E6DEDD",
-    date: "January 2024 - March 2024",
+    title: "Full Stack Web Developer",
+    company_name: "Infosys SpringBoard",
+    icon: springboard,
+    iconBg: "#383E56",
+    date: "October 2024 - December 2024",
     points: [
-      "Gained knowledge about data-driven decision-making and modern data strategies.",
-      "Completed labs on data access and analysis using Amazon S3.",
-      "Designed and built data pipelines focusing on ingestion, storage, processing, and consumption using AWS services like Glue, Redshift, Kinesis, and Athena.",
-      "Processed big data with Amazon EMR, performed ETL tasks with AWS Glue, and created data-driven solutions.",
+      "Designed and implemented the backend using Java with JDBC and integrated it with a MySQL database for secure data storage and retrieval.",
+      "Created secure login and registration functionalities for customers, agents, and administrators, ensuring proper access control.",
+      "Developed functionalities for appointment booking, viewing, and cancellation, along with agent availability management and status updates.",
+      "Created a centralized admin dashboard for managing agents, appointments, and insurance plans, ensuring smooth administrative control.",
     ],
   },
   {
@@ -52,7 +53,21 @@ const experiences = [
       "Image Classification: Enhanced image classification techniques",
     ],
   },
-  /*{}
+  {
+    title: "AWS Data Engineering",
+    company_name: "AICTE",
+    icon: aicte,
+    iconBg: "#E6DEDD",
+    date: "January 2024 - March 2024",
+    points: [
+      "Gained knowledge about data-driven decision-making and modern data strategies.",
+      "Completed labs on data access and analysis using Amazon S3.",
+      "Designed and built data pipelines focusing on ingestion, storage, processing, and consumption using AWS services like Glue, Redshift, Kinesis, and Athena.",
+      "Processed big data with Amazon EMR, performed ETL tasks with AWS Glue, and created data-driven solutions.",
+    ],
+  },
+  
+  /*{
     title: "Front-end Developer",
     company_name: "Motion Cut",
     icon: motioncut,
@@ -64,22 +79,10 @@ const experiences = [
       "Improved user interfaces to ensure better accessibility and usability.",
     ],
   },*/
-  {
-    title: "Full Stack Web Developer",
-    company_name: "Infosys SpringBoard",
-    icon: springboard,
-    iconBg: "#383E56",
-    date: "October 2024 - December 2024",
-    points: [
-      "Designed and implemented the backend using Java with JDBC and integrated it with a MySQL database for secure data storage and retrieval.",
-      "Created secure login and registration functionalities for customers, agents, and administrators, ensuring proper access control.",
-      "Developed functionalities for appointment booking, viewing, and cancellation, along with agent availability management and status updates.",
-      "Created a centralized admin dashboard for managing agents, appointments, and insurance plans, ensuring smooth administrative control.",
-    ],
-  },
   
-  
-  
+
+
+
 ];
 
 interface Experience {
@@ -93,74 +96,83 @@ interface Experience {
 
 interface ExperienceCardProps {
   experience: Experience;
+  index: number;
 }
 
-const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => (
-  <VerticalTimelineElement
-    contentStyle={{ background: "#1d1836", color: "#fff" }}
-    contentArrowStyle={{ borderRight: "7px solid  #232631" }}
-    date={experience.date}
-    visible={true}
-    iconStyle={{ background: experience.iconBg }}
-    icon={
-      <div className="flex justify-center items-center w-full h-full">
-        <Image
-          src={experience.icon}
-          alt={experience.company_name}
-          className="w-[60%] h-[60%] object-contain"
-        />
-      </div>
-    }
-  >
-    <div>
-      <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
-      <p className="text-secondary text-[16px] font-semibold m-0">{experience.company_name}</p>
-    </div>
-    <ul className="mt-5 list-disc ml-5 space-y-2">
-      {experience.points.map((point, index) => (
-        <li key={`experience-point-${index}`} className="text-white-100 text-[14px] pl-1 tracking-wider">
-          {point}
-        </li>
-      ))}
-    </ul>
-  </VerticalTimelineElement>
-);
 
-const Internships = () => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience, index }) => {
+  const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.2 }); // 👈 Keeps reloading
 
-  const [showContent, setShowContent] = useState(false);
-
-  useEffect(() => {
-    if (inView) {
-      const timeoutId = setTimeout(() => setShowContent(true), 500); // Increased delay to 1000ms
-      return () => clearTimeout(timeoutId);
-    }
-  }, [inView]);
+  // Animation with staggered delay
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut", delay: index * 0.3 } // 🔥 Delay based on index
+    },
+  };
 
   return (
-    <div ref={ref}>
-      {showContent && (
-        <>
-          <motion.div variants={textVariant(0.1)}>
-            <p className={`${styles.sectionSubText} text-center`}>What I have done so far</p>
-            <h2 className={`${styles.sectionHeadText} text-center`}>Internships</h2>
-          </motion.div>
-          <div className="mt-20 flex flex-col items-center">
-            {VerticalTimeline && (
-              <VerticalTimeline>
-                {experiences.map((experience, index) => (
-                  <ExperienceCard key={`experience-${index}`} experience={experience} />
-                ))}
-              </VerticalTimeline>
-            )}
+    <motion.div className="mb-10 sm:mb-0" ref={ref} key={inView ? `view-${index}` : `hidden-${index}`} // 👈 Forces reanimation
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      variants={cardVariants}
+      exit={{ opacity: 0, y: -50 }} // Fade out instead of sudden disappearance
+    >
+      <VerticalTimelineElement
+        visible={true}
+        contentStyle={{ background: "#1d1836", color: "#fff" }}
+        contentArrowStyle={{ borderRight: "7px solid  #232631" }}
+        date={experience.date}
+        iconStyle={{ background: experience.iconBg }}
+        icon={
+          <div className="flex justify-center items-center w-full h-full">
+            <Image src={experience.icon} alt={experience.company_name} className="w-[60%] h-[60%] object-contain" />
           </div>
-        </>
-      )}
-    </div>
+        }
+        position={index % 2 === 0 ? "left" : "right"} // 🔥 Alternating left & right
+      >
+        <div>
+          <div>
+            <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
+            <p className="text-secondary text-[16px] font-semibold m-0">{experience.company_name}</p>
+          </div>
+          <ul className="mt-5 list-disc ml-5 space-y-2">
+            {experience.points.map((point, idx) => (
+              <li key={idx} className="text-white-100 text-[14px] pl-1 tracking-wider">
+                {point}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </VerticalTimelineElement>
+    </motion.div>
+  );
+};
+
+
+
+const Internships = () => {
+  return (
+    <section id="internships">
+      <div>
+        <motion.div variants={textVariant(0.1)}>
+          <SectionHeader
+            eyebrow="What have I done so far ?"
+            title="Internships"
+            description="A glimpse into my hands-on industry experience."
+          />
+        </motion.div>
+        <div className="mt-20 flex flex-col items-center">
+          <VerticalTimeline>
+            {experiences.map((experience, index) => (
+              <ExperienceCard key={index} experience={experience} index={index} />
+            ))}
+          </VerticalTimeline>
+        </div>
+      </div>
+    </section>
   );
 };
 

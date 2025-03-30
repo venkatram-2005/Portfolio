@@ -4,15 +4,15 @@ import Link from "next/link";
 const footerLinks = [
   {
     title: "Github",
-    href: "https://github.com",
+    href: "https://github.com/venkatram-2005",
   },
   {
-    title: "Instagram",
-    href: "https://www.instagram.com",
+    title: "Mail",
+    href: "https://mail.google.com/mail/?view=cm&fs=1&to=vallurivenkatram@gmail.com&su=Contact-Request",
   },
   {
     title: "LinkedIn",
-    href: "https://www.linkedin.com",
+    href: "https://www.linkedin.com/in/valluri-venkatram",
   },
 ];
 

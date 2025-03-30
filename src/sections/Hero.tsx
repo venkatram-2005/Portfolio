@@ -13,8 +13,10 @@ import MagicButton from "@/components/MagicButton";
 export const HeroSection = () => {
 
   const handleConnect = () => {
-    window.location.href =
-      "mailto:vallurivenkatram@gmail.com?subject=Contact-Request";
+    window.open(
+      "https://mail.google.com/mail/?view=cm&fs=1&to=vallurivenkatram@gmail.com&su=Contact-Request",
+      "_blank"
+    );
   };
 
   const handleResumeDownload = () => {
@@ -161,16 +163,16 @@ export const HeroSection = () => {
               {/* Animation Ping Thingy Needed */}
               <div className="absolute inset-0 animate-ping-large rounded-full bg-green-500"></div>
             </div>
-            <div className="text-sm font-medium">Available for new project</div>
+            <div className="text-sm font-medium">Actively Looking for Opportunities</div>
           </div>
         </div>
 
         <div className="mx-auto max-w-lg">
           <h1 className="mt-8 gap-4 text-center font-serif text-3xl md:text-5xl">
-          Hi ! I am Venkatram
+          Hi !  I am Venkatram
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
-          Aspiring Software Developer skilled in full-stack development, with an interest in machine learning and data analytics to build practical and impactful applications.
+          Pre-final year Software Developer with experience in Full-stack development, Machine Learning and Data Science. Open to new opportunities and collaborations.
           </p>
         </div>
         {/* Buttons */}

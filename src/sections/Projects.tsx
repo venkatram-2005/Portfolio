@@ -1,9 +1,10 @@
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
-import AnimeVaultImage from "@/assets/images/anime_vault.png";
-import ChatAppImage from "@/assets/images/chat_app.png";
-import MovieStreamingApp from "@/assets/images/MovieStreaming.png";
-import SushiManImage from "@/assets/images/sushi_man.png";
+import jobsphere from "@/assets/images/jobsphere.png"
+import powerbi from "@/assets/images/powerbi.png"
+import telegram from "@/assets/images/telegram.png"
+import insurance from "@/assets/images/insurance.png"
+import houseprice from "@/assets/images/houseprice.png"
 
 import Card from "@/components/Card";
 import SectionHeader from "@/components/SectionHeader";
@@ -12,53 +13,71 @@ import Image from "next/image";
 
 const portfolioProjects = [
   {
-    company: "Infosys SpringBoard",
-    year: "2024",
-    title: "My Policy Hub",
-    results: [
-      { title: "" },
-      { title: "" },
-      { title: "" },
-    ],
-    link: "https://sushiman-jsm.netlify.app/",
-    image: SushiManImage,
-  },
-  {
     company: "Personal Project",
     year: "2025",
     title: "Job Sphere",
     results: [
-      { title: "" },
-      { title: "" },
-      { title: "" },
+      { title: "MERN Stack application with deployment" },
+      { title: "Optimized for all devices" },
+      { title: "Clerk authentication for users, JWT auth for recruiters" },
+      { title: "Cloudinary for storage of images, resumes" },
     ],
-    link: "https://animevault-jsm.netlify.app/",
-    image: AnimeVaultImage,
+    link: "https://job-sphere-dun.vercel.app",
+    image: jobsphere,
+  },
+  {
+    company: "Infosys SpringBoard",
+    year: "2024",
+    title: "My Policy Hub",
+    results: [
+      { title: "Java Full Stack Application" },
+      { title: "Front End: JSP, CSS, JS" },
+      { title: "Backend: JDBC, Servlets" },
+      { title: "Database: MySQL" },
+    ],
+    link: "https://github.com/venkatram-2005/My-Policy-Hub---An-Online-Insurance-Management-System",
+    image:insurance ,
+  },
+  {
+    company: "Data Analytics",
+    year: "2024",
+    title: "Power BI Dashboards",
+    results: [
+      { title: "Comprehensive Data Visualization" },
+      { title: "Customizable & User-Friendly" },
+      { title: "Historical Data Insights" },
+      { title: "Actionable Insights & Decision-Making" },
+    ],
+    link: "https://github.com/venkatram-2005/PowerBI-DashBoards",
+    image: powerbi,
+  },
+  {
+    company: "Web Scraping to Model Development",
+    year: "2024",
+    title: "House Price Prediction",
+    results: [
+      { title: "Web Scraping with BeautifulSoup" },
+      { title: "Data Processing & Feature Engineering " },
+      { title: "Model Development & Training" },
+      { title: "Deployment for Real-World Use " },
+    ],
+    link: "https://house-price-prediction-web-scraping-to.onrender.com",
+    image: houseprice,
   },
   {
     company: "Telegram Bot",
     year: "2024",
     title: "AI Bot For All",
     results: [
-      { title: "" },
-      { title: "" },
-      { title: "" },
+      { title: "AI-Powered Conversations" },
+      { title: "Multi-Functionality" },
+      { title: "Scalable & Customizable" },
+      { title: "Power BI Integration" },
     ],
-    link: "https://github.com/Emperor-Grey/Portfolio/blob/master/src/assets/video/vid.mp4/",
-    image: MovieStreamingApp,
+    link: "https://github.com/venkatram-2005/Gemini-Telegram-Bot",
+    image: telegram,
   },
-  {
-    company: "Personal Work",
-    year: "2024",
-    title: "Power BI Dashboards",
-    results: [
-      { title: "" },
-      { title: "" },
-      { title: "" },
-    ],
-    link: "https://backend-node-js-chat-app.vercel.app/",
-    image: ChatAppImage,
-  },
+
 ];
 
 export const ProjectsSection = () => {
@@ -103,7 +122,7 @@ export const ProjectsSection = () => {
                   </ul>
                   <a href={project.link}>
                     <button className="mt-8 inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-white font-semibold text-gray-950 md:w-auto md:px-6">
-                      <span>Visit Live Site</span>
+                      <span>Visit Live Site / Repository</span>
                       <ArrowUpRightIcon className="size-4" />
                     </button>
                   </a>
