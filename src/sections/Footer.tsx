@@ -8,7 +8,7 @@ const footerLinks = [
   },
   {
     title: "Mail",
-    href: "https://mail.google.com/mail/?view=cm&fs=1&to=vallurivenkatram@gmail.com&su=Contact-Request",
+    href: "mailto:vallurivenkatram@gmail.com?subject=Contact-Request",
   },
   {
     title: "LinkedIn",

@@ -13,10 +13,7 @@ import MagicButton from "@/components/MagicButton";
 export const HeroSection = () => {
 
   const handleConnect = () => {
-    window.open(
-      "https://mail.google.com/mail/?view=cm&fs=1&to=vallurivenkatram@gmail.com&su=Contact-Request",
-      "_blank"
-    );
+    window.open("https://www.linkedin.com/in/valluri-venkatram")
   };
 
   const handleResumeDownload = () => {
