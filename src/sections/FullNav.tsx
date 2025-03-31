@@ -31,10 +31,6 @@ const navLinks: NavLink[] = [
         id: "contact",
         title: "Contact",
     },
-    {
-        id: "contact",
-        title: "Contact",
-    },
 ];
 
 const Navbar: React.FC = () => {
