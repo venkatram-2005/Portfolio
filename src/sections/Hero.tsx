@@ -145,8 +145,10 @@ export const HeroSection = () => {
           <Image
             onClick={handleResumeDownload}
             className="group size-24 hover:cursor-pointer"
-            src={memojiImage}
-            alt="Person Looking at the laptop"
+            src="/exp2.svg"  // Changed from memojiImage to SVG path
+            alt="Experience illustration"
+            width={96}      // Added width (required for Next.js Image)
+            height={96}     // Added height (required for Next.js Image)
           />
 
           {/* Tooltip */}
