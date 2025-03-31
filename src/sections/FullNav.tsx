@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
                     <Image src={logo} alt="logo" width={36} height={36} className="object-contain" />
                     <p className='text-white text-[18px] font-bold cursor-pointer flex '>
                         Venkatram &nbsp;
-                        <span className='sm:block hidden'> | Portfolio</span>
+                        <span className='sm:block hidden'> |  Portfolio</span>
                     </p>
                 </a>
 
