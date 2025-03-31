@@ -175,11 +175,11 @@ export const HeroSection = () => {
 
         <div className="mx-auto max-w-lg">
           <h1 className="mt-8 gap-4 text-center text-3xl md:text-5xl font-serif">
-            <span className="font-serif text-white">Hi! I am </span>
+            <span className="font-serif text-white">Hi! I am Venkatram, </span>
             <span className="font-bold bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent">
               <Typewriter
                 words={[
-                  "Venkatram",
+                  //"Venkatram",
                   "a Full-Stack Web Developer",
                   "a Machine Learning Enthusiast",
                   "a Data Analyst",

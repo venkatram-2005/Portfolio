@@ -29,7 +29,7 @@ interface ServiceCardProps {
 }
 
 const services: Service[] = [
-  { title: "Full Stack Web Developer", icon: web },
+  { title: "Full Stack Web Development", icon: web },
   { title: "Machine Learning", icon: mobile },
   { title: "Data Science", icon: backend },
 ];
