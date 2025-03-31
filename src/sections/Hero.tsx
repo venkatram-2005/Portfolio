@@ -150,6 +150,12 @@ export const HeroSection = () => {
             width={96}      // Added width (required for Next.js Image)
             height={96}     // Added height (required for Next.js Image)
           />
+          {/* <Image
+                onClick={handleResumeDownload}
+                className="group size-24 hover:cursor-pointer"
+                src={memojiImage}
+                alt="Person Looking at the laptop"
+              />*/}
 
           {/* Tooltip */}
           <span className="absolute top-2 ml-12 hidden translate-x-1/2 transform rounded-3xl rounded-bl-none bg-black px-2 py-1 text-xs font-medium text-white group-hover:block">

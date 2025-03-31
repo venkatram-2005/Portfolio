@@ -35,10 +35,10 @@ const experiences = [
     iconBg: "#383E56",
     date: "October 2024 - December 2024",
     points: [
-      "Designed and implemented the backend using Java with JDBC and integrated it with a MySQL database for secure data storage and retrieval.",
-      "Created secure login and registration functionalities for customers, agents, and administrators, ensuring proper access control.",
-      "Developed functionalities for appointment booking, viewing, and cancellation, along with agent availability management and status updates.",
-      "Created a centralized admin dashboard for managing agents, appointments, and insurance plans, ensuring smooth administrative control.",
+      "Developed a Java backend with JDBC and MySQL for secure data management.",
+      "Implemented role-based login and registration for customers, agents, and admins.",
+      "Built features for appointment booking, cancellation, and agent availability tracking.",
+      "Designed an admin dashboard for managing agents, appointments, and insurance plans."
     ],
   },
   {
@@ -60,10 +60,10 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "January 2024 - March 2024",
     points: [
-      "Gained knowledge about data-driven decision-making and modern data strategies.",
-      "Completed labs on data access and analysis using Amazon S3.",
-      "Designed and built data pipelines focusing on ingestion, storage, processing, and consumption using AWS services like Glue, Redshift, Kinesis, and Athena.",
-      "Processed big data with Amazon EMR, performed ETL tasks with AWS Glue, and created data-driven solutions.",
+      "Learned data-driven decision-making and modern data strategies.",
+      "Completed labs on data access and analysis with Amazon S3.",
+      "Built data pipelines for ingestion, storage, processing, and consumption using AWS services like Glue, Redshift, Kinesis, and Athena.",
+      "Processed big data with EMR, performed ETL with Glue, and developed data-driven solutions."
     ],
   },
   
@@ -79,10 +79,6 @@ const experiences = [
       "Improved user interfaces to ensure better accessibility and usability.",
     ],
   },*/
-  
-
-
-
 ];
 
 interface Experience {
