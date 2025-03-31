@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { twMerge } from "tailwind-merge";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 import { Calistoga, Inter } from "next/font/google";
 import "./globals.css";
@@ -51,6 +52,7 @@ export default function RootLayout({
         />
         {children}
       </body>
+      <GoogleAnalytics gaId="G-KS4J88K0DK" />
     </html>
   );
 }

@@ -10,14 +10,24 @@ import memojiImage from "@/assets/images/memoji-computer.png";
 import HeroOrbit from "@/components/HeroOrbit";
 import MagicButton from "@/components/MagicButton";
 import { Typewriter } from "react-simple-typewriter";
+import { sendGAEvent } from "@next/third-parties/google";
 
 export const HeroSection = () => {
 
   const handleConnect = () => {
+    sendGAEvent({
+      event: "Viewed_LinkedIn",
+      value: "Visited-Linkedin",
+    });
     window.open("https://www.linkedin.com/in/valluri-venkatram")
   };
 
   const handleResumeDownload = () => {
+    sendGAEvent({
+      event: "resume_download",
+      value: "Valluri_Venkatram.pdf",
+    });
+  
     const link = document.createElement("a");
     link.href = "./pdf/Valluri_Venkatram.pdf";
     link.download = "";
