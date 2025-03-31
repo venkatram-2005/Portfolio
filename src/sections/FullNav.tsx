@@ -28,6 +28,10 @@ const navLinks: NavLink[] = [
         title: "Certifications",
     },
     {
+        id: "about",
+        title: "About",
+    },
+    {
         id: "contact",
         title: "Contact",
     },
