@@ -9,6 +9,7 @@ import grainImage from "@/assets/images/grain.jpg";
 import memojiImage from "@/assets/images/memoji-computer.png";
 import HeroOrbit from "@/components/HeroOrbit";
 import MagicButton from "@/components/MagicButton";
+import { Typewriter } from "react-simple-typewriter";
 
 export const HeroSection = () => {
 
@@ -165,11 +166,29 @@ export const HeroSection = () => {
         </div>
 
         <div className="mx-auto max-w-lg">
-          <h1 className="mt-8 gap-4 text-center font-serif text-3xl md:text-5xl">
-          Hi !  I am Venkatram
+          <h1 className="mt-8 gap-4 text-center text-3xl md:text-5xl font-serif">
+            <span className="font-serif text-white">Hi! I am </span>
+            <span className="font-bold bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent">
+              <Typewriter
+                words={[
+                  "Venkatram",
+                  "a Full-Stack Web Developer",
+                  "a Machine Learning Enthusiast",
+                  "a Data Analyst",
+                  "a Data Science Practitioner",
+                ]}
+                loop={true}
+                cursor
+                cursorStyle="_"
+                cursorColor="#ffffff"  // Explicitly set cursor color
+                typeSpeed={90}
+                deleteSpeed={50}
+                delaySpeed={1500}
+              />
+            </span>
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
-          Pre-final year Software Developer with experience in Full-stack development, Machine Learning and Data Science. Open to new opportunities and collaborations.
+            Pre-final year Software Developer with experience in Full-stack development, Machine Learning and Data Science. Open to new opportunities and collaborations.
           </p>
         </div>
         {/* Buttons */}
@@ -183,7 +202,7 @@ export const HeroSection = () => {
 
           <MagicButton
             title="Let's Connect 👋"
-            icon={null} 
+            icon={null}
             position="right"
             handleClick={handleConnect}
           />
