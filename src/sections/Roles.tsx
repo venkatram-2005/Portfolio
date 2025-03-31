@@ -66,7 +66,7 @@ const Roles: React.FC = () => {
   });
 
   return (
-    <section id="overview">
+    <section id="overview" className="pb-16 lg:py-24">
       <div className="container">
       <motion.div
         ref={ref}

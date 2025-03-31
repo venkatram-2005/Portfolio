@@ -147,8 +147,8 @@ export const AboutSection = () => {
             </Card>
             <Card className="h-[320px] md:col-span-3 lg:col-span-2">
               <CardHeader
-                title="My Toolbox"
-                description="Explore the technologies and tools I use to craft exceptional digital experiences."
+                title="Web Development Toolkit"
+                description="Explore the technologies and tools I use to build dynamic web applications."
               />
               <ToolboxItems
                 items={toolboxItems}
@@ -157,7 +157,7 @@ export const AboutSection = () => {
               <ToolboxItems
                 items={toolboxItems}
                 className="mt-6"
-                itemsWrapperClassName="animate-move-right [animation-duration:15s]"
+                itemsWrapperClassName="animate-move-right [animation-duration:13s]"
               />
             </Card>
           </div>

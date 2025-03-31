@@ -26,11 +26,11 @@ export default function Home() {
       <HeroSection />
       <div className='relative z-0 flex flex-col items-center justify-center mx-auto '>
         <Roles idName="roles" />
-        {/*<TapeSection/>*/}
         <Internships idName="work"/>
       </div>
       <ProjectsSection />
       {/* Grid Bento */}
+      <TapeSection/>
       <AboutSection />
       {/*<InfiniteImageScroll/>*/}
       <ContactSection />
