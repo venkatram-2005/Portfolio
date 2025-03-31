@@ -7,7 +7,7 @@ import Roles from "@/sections/Roles";
 import Internships from "@/sections/Internships";
 import { ContactSection } from "@/sections/Contact"
 import { TapeSection } from "@/sections/Tape";
-import { InfiniteImageScroll } from "@/sections/Scroll";
+import { InfiniteScroll } from "@/sections/Scroll";
 import Navbar from "@/sections/FullNav";
 
 const navItems = [
@@ -29,10 +29,9 @@ export default function Home() {
         <Internships idName="work"/>
       </div>
       <ProjectsSection />
-      {/* Grid Bento */}
       <TapeSection/>
+      <InfiniteScroll/>
       <AboutSection />
-      {/*<InfiniteImageScroll/>*/}
       <ContactSection />
       <Footer />
     </div>

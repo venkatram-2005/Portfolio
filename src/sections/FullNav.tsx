@@ -24,8 +24,12 @@ const navLinks: NavLink[] = [
         title: "Projects",
     },
     {
-        id: "about",
-        title: "About",
+        id: "certifications",
+        title: "Certifications",
+    },
+    {
+        id: "contact",
+        title: "Contact",
     },
     {
         id: "contact",
