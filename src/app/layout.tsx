@@ -5,6 +5,7 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 import { Calistoga, Inter } from "next/font/google";
 import "./globals.css";
 import Starfield from "@/components/StarField";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
   title: "Venkatram's Portfolio",
@@ -51,6 +52,7 @@ export default function RootLayout({
           backgroundColor="black"
         />
         {children}
+        <ScrollToTop />
       </body>
       <GoogleAnalytics gaId="G-KS4J88K0DK" />
     </html>
