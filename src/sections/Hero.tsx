@@ -13,10 +13,9 @@ import { Typewriter } from "react-simple-typewriter";
 import { sendGAEvent } from "@next/third-parties/google";
 
 export const HeroSection = () => {
-
   const handleConnect = () => {
     sendGAEvent({
-      event: "viewed_linkedIn",
+      event: "viewed_linkedin",
       value: "Visited_Linkedin",
     });
     window.open("https://www.linkedin.com/in/valluri-venkatram")
