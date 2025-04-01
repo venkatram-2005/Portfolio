@@ -16,8 +16,8 @@ export const HeroSection = () => {
 
   const handleConnect = () => {
     sendGAEvent({
-      event: "Viewed_LinkedIn",
-      value: "Visited-Linkedin",
+      event: "viewed_linkedIn",
+      value: "Visited_Linkedin",
     });
     window.open("https://www.linkedin.com/in/valluri-venkatram")
   };
