@@ -5,6 +5,8 @@ import powerbi from "@/assets/images/powerbi.png"
 import telegram from "@/assets/images/telegram.png"
 import insurance from "@/assets/images/insurance.png"
 import houseprice from "@/assets/images/houseprice.png"
+import gitquery from "@/assets/images/gitquery.png"
+import echohire from "@/assets/images/echohire.png"
 
 import Card from "@/components/Card";
 import SectionHeader from "@/components/SectionHeader";
@@ -18,13 +20,40 @@ const portfolioProjects = [
     title: "Job Sphere",
     results: [
       { title: "MERN Stack application with deployment" },
-      { title: "Optimized for all devices" },
+      { title: "NLP based job recommendations, Node mailer for updates" },
       { title: "Clerk authentication for users, JWT auth for recruiters" },
       { title: "Cloudinary for storage of images, resumes" },
     ],
-    link: "https://job-sphere-dun.vercel.app",
+    link: "https://job-sphere-evolved.vercel.app",
     image: jobsphere,
   },
+  {
+    company: "RAG Powered GitHub Repo Chatbot",
+    year: "2025",
+    title: "GitQuery",
+    results: [
+      { title: "Query codebases with natural language" },
+      { title: "Next.js, Gemini 2.5, Postgre SQL" },
+      { title: "Secure Payments (Razorpay)" },
+      { title: "Vercel Deployment" },
+    ],
+    link: "https://gitquery.vercel.app",
+    image: gitquery,
+  },
+  {
+    company: "AI-Powered Mock Interview Platform",
+    year: "2025",
+    title: "EchoHire",
+    results: [
+      { title: "Voice-based mock interviews with feedback" },
+      { title: "Next.js, TypeScript, Gemini API, Vapi" },
+      { title: "Firebase Auth & Firestore Integration" },
+      { title: "Deployed with Vercel" },
+    ],
+    link: "https://echohire-ai.vercel.app",
+    image: echohire,
+  },
+
   {
     company: "Infosys SpringBoard",
     year: "2024",
@@ -64,20 +93,7 @@ const portfolioProjects = [
     link: "https://house-price-prediction-web-scraping-to.onrender.com",
     image: houseprice,
   },
-  {
-    company: "Telegram Bot",
-    year: "2024",
-    title: "AI Bot For All",
-    results: [
-      { title: "AI-Powered Conversations" },
-      { title: "Multi-Functionality" },
-      { title: "Scalable & Customizable" },
-      { title: "Power BI Integration" },
-    ],
-    link: "https://github.com/venkatram-2005/Gemini-Telegram-Bot",
-    image: telegram,
-  },
-
+  
 ];
 
 export const ProjectsSection = () => {

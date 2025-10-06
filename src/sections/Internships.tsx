@@ -13,6 +13,7 @@ import { textVariant } from "../lib/motion";
 
 import aicte from "../assets/company/aicte.png";
 import motioncut from "../assets/company/motioncut.png";
+import edunet from "../assets/company/edunet.png";
 import springboard from "../assets/company/springboard.png";
 import SectionHeader from "@/components/SectionHeader";
 
@@ -29,6 +30,20 @@ const VerticalTimelineElement = dynamic(
 
 const experiences = [
   {
+    title: "AI: Transformative Learning with TechSaksham",
+    company_name: "Microsoft & SAP - Edunet Foundation (AICTE)",
+    icon: edunet,  
+    iconBg: "#383E56",
+    date: "January 2025 - February 2025",
+    points: [
+      "Completed 4-week internship on Artificial Intelligence under TechSaksham initiative.",
+      "Received mentorship from Microsoft & SAP experts through technical and project-based sessions.",
+      "Developed a Potato Leaf Disease Detection model with Grad-CAM integration for Explainable AI.",
+      "Earned certification from Microsoft, SAP, AICTE, and Edunet Foundation."
+    ],
+  },
+
+  {
     title: "Full Stack Web Developer",
     company_name: "Infosys SpringBoard",
     icon: springboard,
@@ -39,6 +54,18 @@ const experiences = [
       "Implemented role-based login and registration for customers, agents, and admins.",
       "Built features for appointment booking, cancellation, and agent availability tracking.",
       "Designed an admin dashboard for managing agents, appointments, and insurance plans."
+    ],
+  },
+  {
+    title: "Front-end Developer",
+    company_name: "Motion Cut",
+    icon: motioncut,
+    iconBg: "#383E56",
+    date: "September 2024 - October 2024",
+    points: [
+      "Developed responsive web pages using HTML, CSS, JavaScript, and React.",
+      "Assisted the Manager with technical tasks and project requirements.",
+      "Improved user interfaces to ensure better accessibility and usability.",
     ],
   },
   {
@@ -67,18 +94,7 @@ const experiences = [
     ],
   },
   
-  /*{
-    title: "Front-end Developer",
-    company_name: "Motion Cut",
-    icon: motioncut,
-    iconBg: "#383E56",
-    date: "September 2024 - October 2024",
-    points: [
-      "Developed responsive web pages using HTML, CSS, JavaScript, and React.",
-      "Assisted the Manager with technical tasks and project requirements.",
-      "Improved user interfaces to ensure better accessibility and usability.",
-    ],
-  },*/
+  
 ];
 
 interface Experience {
