@@ -205,7 +205,7 @@ export const HeroSection = () => {
             </span>
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
-            Pre-final year Software Developer with experience in Full-stack development, Machine Learning and Data Science. Open to new opportunities and collaborations.
+            Software Developer with experience in Full-stack development, Artificial Intelligence and Machine Learning. Open to new opportunities and collaborations.
           </p>
         </div>
         {/* Buttons */}
