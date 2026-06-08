@@ -1,4 +1,4 @@
-import { IConfig } from 'next-sitemap';
+import type { IConfig } from 'next-sitemap';
 
 const config: IConfig = {
   siteUrl: 'https://venkatram.vercel.app',
