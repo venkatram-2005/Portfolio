@@ -7,6 +7,7 @@ import insurance from "@/assets/images/insurance.png"
 import houseprice from "@/assets/images/houseprice.png"
 import gitquery from "@/assets/images/gitquery.png"
 import echohire from "@/assets/images/echohire.png"
+import hotelverse from "@/assets/images/hotelverse.png"
 
 import Card from "@/components/Card";
 import SectionHeader from "@/components/SectionHeader";
@@ -14,6 +15,19 @@ import SectionHeader from "@/components/SectionHeader";
 import Image from "next/image";
 
 const portfolioProjects = [
+  {
+    company: "Cognizant",
+    year: "2026",
+    title: "Hotel Verse",
+    results: [
+      { title: "Built a smart hotel booking platform using Spring Boot Microservices and Angular" },
+      { title: "Designed scalable REST APIs with Spring Data JPA, Hibernate, and MySQL" },
+      { title: "Implemented containerization using Docker and followed microservices architecture principles" },
+      { title: "Deployed the application on AWS cloud instances and managed cloud-based environments" },
+    ],
+    link: "https://github.com/venkatram-2005/Hotel-Verse---Smart-Hotel-Booking-System",
+    image: hotelverse,
+  },
   {
     company: "Personal Project",
     year: "2025",
@@ -80,19 +94,19 @@ const portfolioProjects = [
     link: "https://github.com/venkatram-2005/PowerBI-DashBoards",
     image: powerbi,
   },
-  {
-    company: "Web Scraping to Model Development",
-    year: "2024",
-    title: "House Price Prediction",
-    results: [
-      { title: "Web Scraping with BeautifulSoup" },
-      { title: "Data Processing & Feature Engineering " },
-      { title: "Model Development & Training" },
-      { title: "Deployment for Real-World Use " },
-    ],
-    link: "https://house-price-prediction-web-scraping-to.onrender.com",
-    image: houseprice,
-  },
+  // {
+  //   company: "Web Scraping to Model Development",
+  //   year: "2024",
+  //   title: "House Price Prediction",
+  //   results: [
+  //     { title: "Web Scraping with BeautifulSoup" },
+  //     { title: "Data Processing & Feature Engineering " },
+  //     { title: "Model Development & Training" },
+  //     { title: "Deployment for Real-World Use " },
+  //   ],
+  //   link: "https://house-price-prediction-web-scraping-to.onrender.com",
+  //   image: houseprice,
+  // },
   
 ];
 
