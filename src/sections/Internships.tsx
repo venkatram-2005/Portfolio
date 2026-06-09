@@ -11,8 +11,8 @@ import { styles } from "../lib/styles";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../lib/motion";
 
-import aicte from "../assets/company/aicte.png";
-import motioncut from "../assets/company/motioncut.png";
+import cognizant from "../assets/company/cognizant.png";
+import recruitcrm from "../assets/company/recruitcrm.png";
 import edunet from "../assets/company/edunet.png";
 import springboard from "../assets/company/springboard.png";
 import SectionHeader from "@/components/SectionHeader";
@@ -30,16 +30,44 @@ const VerticalTimelineElement = dynamic(
 
 const experiences = [
   {
+    title: "Java Full Stack & Angular Developer Intern",
+    company_name: "Cognizant",
+    icon: cognizant,
+    iconBg: "#383E56",
+    date: "February 2026 - May 2026",
+    points: [
+      "Developed scalable enterprise applications using Spring Boot, Microservices, and Angular.",
+      "Led the design and implementation of project modules, ensuring timely delivery in an Agile environment.",
+      "Implemented deployment workflows and leveraged Git, Docker, and AWS for cloud-based development and delivery.",
+      "Collaborated with cross-functional teams to build and maintain production-ready software solutions."
+    ],
+  },
+
+  {
+    title: "Associate Software Engineer Intern",
+    company_name: "Recruit CRM",
+    icon: recruitcrm,
+    iconBg: "#383E56",
+    date: "October 2025 - January 2026",
+    points: [
+      "Diagnosed and resolved application defects, improving platform reliability and development efficiency.",
+      "Developed and enhanced AI-powered features, including chatbot workflows and resume parsing capabilities.",
+      "Built and maintained features using Vue.js, PrimeVue, TypeScript, FastAPI, Spring Boot, and MySQL.",
+      "Collaborated with engineering teams to deliver scalable and user-centric CRM functionalities."
+    ],
+  },
+
+  {
     title: "AI: Transformative Learning with TechSaksham",
     company_name: "Microsoft & SAP - Edunet Foundation (AICTE)",
-    icon: edunet,  
+    icon: edunet,
     iconBg: "#383E56",
     date: "January 2025 - February 2025",
     points: [
-      "Completed 4-week internship on Artificial Intelligence under TechSaksham initiative.",
-      "Received mentorship from Microsoft & SAP experts through technical and project-based sessions.",
+      "Completed a 4-week Artificial Intelligence internship under the TechSaksham initiative.",
+      "Received mentorship from Microsoft and SAP experts through technical and project-based sessions.",
       "Developed a Potato Leaf Disease Detection model with Grad-CAM integration for Explainable AI.",
-      "Earned certification from Microsoft, SAP, AICTE, and Edunet Foundation."
+      "Earned certifications from Microsoft, SAP, AICTE, and Edunet Foundation."
     ],
   },
 
@@ -50,53 +78,13 @@ const experiences = [
     iconBg: "#383E56",
     date: "October 2024 - December 2024",
     points: [
-      "Developed a Java backend with JDBC and MySQL for secure data management.",
-      "Implemented role-based login and registration for customers, agents, and admins.",
-      "Built features for appointment booking, cancellation, and agent availability tracking.",
-      "Designed an admin dashboard for managing agents, appointments, and insurance plans."
+      "Developed a Java backend using JDBC and MySQL for secure data management.",
+      "Implemented role-based authentication for customers, agents, and administrators.",
+      "Built appointment booking, cancellation, and agent availability management features.",
+      "Designed an admin dashboard to manage agents, appointments, and insurance plans."
     ],
   },
-  {
-    title: "Front-end Developer",
-    company_name: "Motion Cut",
-    icon: motioncut,
-    iconBg: "#383E56",
-    date: "September 2024 - October 2024",
-    points: [
-      "Developed responsive web pages using HTML, CSS, JavaScript, and React.",
-      "Assisted the Manager with technical tasks and project requirements.",
-      "Improved user interfaces to ensure better accessibility and usability.",
-    ],
-  },
-  {
-    title: "AI/ML Engineer",
-    company_name: "AICTE",
-    icon: aicte,
-    iconBg: "#E6DEDD",
-    date: "April 2024 - June 2024",
-    points: [
-      "Neural Networks: Programmed neural networks using TensorFlow.",
-      "Object Detection: Completed projects on object detection and product image search.",
-      "Image Classification: Enhanced image classification techniques",
-    ],
-  },
-  {
-    title: "AWS Data Engineering",
-    company_name: "AICTE",
-    icon: aicte,
-    iconBg: "#E6DEDD",
-    date: "January 2024 - March 2024",
-    points: [
-      "Learned data-driven decision-making and modern data strategies.",
-      "Completed labs on data access and analysis with Amazon S3.",
-      "Built data pipelines for ingestion, storage, processing, and consumption using AWS services like Glue, Redshift, Kinesis, and Athena.",
-      "Processed big data with EMR, performed ETL with Glue, and developed data-driven solutions."
-    ],
-  },
-  
-  
 ];
-
 interface Experience {
   title: string;
   company_name: string;

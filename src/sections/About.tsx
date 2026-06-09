@@ -25,6 +25,25 @@ import "@/app/about.css";
 import { FaHackerrank } from "react-icons/fa";
 import { SiLeetcode, SiCodechef, SiGeeksforgeeks } from "react-icons/si";
 
+import {
+  SiJavascript,
+  SiTypescript,
+  SiAngular,
+  SiSpringboot,
+  SiDocker,
+  SiMongodb,
+  SiMysql,
+  SiVuedotjs,
+  SiNodedotjs,
+  SiReact,
+  SiGit,
+  SiGithub,
+  SiHtml5,
+  SiCss,
+} from "react-icons/si";
+
+import { FaJava } from "react-icons/fa";
+
 const profiles = [
   { name: "HackerRank", icon: <FaHackerrank className="text-green-500 text-2xl" />, link: "https://www.hackerrank.com/profile/venkatram_2005" },
   { name: "LeetCode", icon: <SiLeetcode className="text-yellow-500 text-2xl" />, link: "https://leetcode.com/u/venkatram_2005/" },
@@ -35,40 +54,64 @@ const profiles = [
 
 const toolboxItems = [
   {
+    title: "Java",
+    iconType: FaJava,
+  },
+  {
+    title: "Spring Boot",
+    iconType: SiSpringboot,
+  },
+  {
+    title: "Angular",
+    iconType: SiAngular,
+  },
+  {
+    title: "TypeScript",
+    iconType: SiTypescript,
+  },
+  {
     title: "JavaScript",
-    iconType: JavaScriptIcon,
-  },
-  {
-    title: "HTML5",
-    iconType: HTMLIcon,
-  },
-  {
-    title: "CSS3",
-    iconType: CSSIcon,
+    iconType: SiJavascript,
   },
   {
     title: "React",
-    iconType: ReactIcon,
+    iconType: SiReact,
   },
   {
-    title: "Node Js",
-    iconType: NodeJsIcon,
+    title: "Vue.js",
+    iconType: SiVuedotjs,
   },
   {
-    title: "SQL",
-    iconType: SQLIcon,
+    title: "Node.js",
+    iconType: SiNodedotjs,
   },
   {
-    title: "Github",
-    iconType: GithubIcon,
+    title: "MySQL",
+    iconType: SiMysql,
+  },
+  {
+    title: "MongoDB",
+    iconType: SiMongodb,
+  },
+  {
+    title: "Docker",
+    iconType: SiDocker,
   },
   {
     title: "Git",
-    iconType: GitIcon,
+    iconType: SiGit,
   },
   {
-    title: "Java",
-    iconType: JavaIcon,
+    title: "GitHub",
+    iconType: SiGithub,
+  },
+  {
+    title: "HTML5",
+    iconType: SiHtml5,
+  },
+  {
+    title: "CSS3",
+    iconType: SiCss,
   },
 ];
 
@@ -125,27 +168,43 @@ export const AboutSection = () => {
 
         <div className="mt-20 flex flex-col gap-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
-            <Card className="h-[320px] md:col-span-2 lg:col-span-1">
-              <CardHeader
-                title="My Profiles"
-                description="Explore my coding profiles"
-              />
-              <div className="grid grid-cols-3 gap-2 p-2">
-                {profiles.slice(0, 3).map((profile) => (
-                  <a
-                    key={profile.name}
-                    href={profile.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex flex-col items-center justify-center p-4 rounded-2xl hover:shadow-lg transition"
-                  >
-                    <div className="flex items-center justify-center w-16 h-16">{profile.icon}</div>
-                    <span className="mt-2 font-semibold text-white text-sm">{profile.name}</span>
-                  </a>
-                ))}
-              </div>
-            </Card>
-            <Card className="h-[320px] md:col-span-3 lg:col-span-2">
+            <Card className="h-[340px] md:col-span-2 lg:col-span-1 overflow-hidden">
+                <CardHeader
+                  title="Coding Profiles"
+                  description="Competitive programming achievements and coding platforms."
+                />
+
+                <div className="flex h-full flex-col px-6 pb-5">
+                  {/* Profile Links */}
+                  <div className="flex flex-col gap-3">
+                    {profiles.map((profile) => (
+                      <a
+                        key={profile.name}
+                        href={profile.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group flex items-center justify-between rounded-xl border border-white/10 bg-gradient-to-r from-emerald-300/10 to-sky-400/10 px-4 py-3 transition-all duration-300 hover:scale-[1.02] hover:border-emerald-300/40"
+                      >
+                        <div className="flex items-center gap-3">
+                          {profile.icon}
+                          <span className="font-medium text-white">
+                            {profile.name}
+                          </span>
+                        </div>
+
+                        <span className="text-xs text-white/40 transition-colors group-hover:text-white/70">
+                          Visit →
+                        </span>
+                      </a>
+                    ))}
+                  </div>
+
+                  <p className="mt-auto pt-4 text-center text-xs text-white/50">
+                    Passionate about algorithms, problem solving, and continuous learning.
+                  </p>
+                </div>
+             </Card>
+            <Card className="h-[340px] md:col-span-3 lg:col-span-2">
               <CardHeader
                 title="Web Development Toolkit"
                 description="Explore the technologies and tools I use to build dynamic web applications."

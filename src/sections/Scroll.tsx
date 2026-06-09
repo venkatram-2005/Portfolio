@@ -6,6 +6,7 @@ import gdg from "@/assets/cert/gdg.png"
 import hackerrank from "@/assets/cert/hackerrank.png"
 import infy from "@/assets/cert/infy.png"
 import nptel from "@/assets/cert/nptel.png"
+import linkedin from "@/assets/cert/linkedin.png"
 import si from "@/assets/cert/si.png"
 import spokentutorials from "@/assets/cert/spokentutorials.png"
 import udemy from "@/assets/cert/udemy.png"
@@ -25,7 +26,7 @@ const certifications = [
     link: "https://drive.google.com/drive/folders/1dpUA4GcVyU-cKdC5keBWRH5tR0zJkMXH?usp=sharing",
   },
   {
-    name: "AWS Academy Cloud Foundations, Data Engineering",
+    name: "AWS Academy Cloud Foundations",
     issuer: "Amazon Web Services (AWS)",
     description: "Covers fundamental cloud computing concepts, AWS services, security, pricing models and data engineering concepts.",
     img: aws,
@@ -86,6 +87,34 @@ const certifications = [
     description: "Comprehensive training on vesrion control system.",
     img: udemy,
     link: "https://drive.google.com/drive/folders/147Vm-LsJO-GVypH7cJi9Qq56Syg6hUwZ?usp=sharing",
+  },
+  {
+    name: "Vue.js and TypeScript",
+    issuer: "Udemy",
+    description: "Comprehensive training on Vue.js and TypeScript.",
+    img: udemy,
+    link: "https://drive.google.com/drive/folders/1P17HYBw7Er6Nfico1ysBu2eHS2IbKBF4?usp=sharing",
+  },
+  {
+    name: "Spring Boot, Hibernate and JPA",
+    issuer: "Udemy",
+    description: "Comprehensive training on Spring Boot, Hibernate and JPA.",
+    img: udemy,
+    link: "https://drive.google.com/drive/folders/100QYLT_xrHSpCGbjm0OzLLWotytED8wA?usp=sharing",
+  },
+  {
+    name: "Career Essentials in GitHub",
+    issuer: "LinkedIn Learning",
+    description: "Comprehensive training on Git, GitHub.",
+    img: linkedin,
+    link: "https://drive.google.com/drive/folders/12aBFGn2sotxpNqZimTJnz3DA8URqecRH?usp=drive_link",
+  },
+  {
+    name: "Ubuntu Linux Professional by Canonical",
+    issuer: "LinkedIn Learning",
+    description: "Comprehensive training on Ubuntu Linux.",
+    img: linkedin,
+    link: "https://drive.google.com/drive/folders/1jTVKoaHqAWyuda6544a6_kTpmq40MpH8?usp=drive_link",
   },
 ];
 
