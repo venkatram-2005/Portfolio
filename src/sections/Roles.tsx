@@ -29,9 +29,9 @@ interface ServiceCardProps {
 }
 
 const services: Service[] = [
-  { title: "Full Stack Web Development", icon: web },
-  { title: "Machine Learning", icon: mobile },
-  { title: "Data Science", icon: backend },
+  { title: "Full Stack Web Development (MERN, Java, Angular)", icon: web },
+  { title: "Artificial Intelligence & Machine Learning", icon: mobile },
+  { title: "Data Science (Power BI)", icon: backend },
 ];
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ index, title, icon }) => {

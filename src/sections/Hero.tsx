@@ -7,6 +7,7 @@ import SparkleIcon from "@/assets/icons/sparkle.svg";
 import StarIcon from "@/assets/icons/star.svg";
 import grainImage from "@/assets/images/grain.jpg";
 import memojiImage from "@/assets/images/memoji-computer.png";
+import myimg from "@/assets/Venkatram.jpg";
 import HeroOrbit from "@/components/HeroOrbit";
 import MagicButton from "@/components/MagicButton";
 import { Typewriter } from "react-simple-typewriter";
@@ -34,7 +35,10 @@ export const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="relative z-0 py-32 md:py-48 lg:py-60">
+    <section
+      id="home"
+      className="relative z-0 pt-32 pb-24 md:pt-40 md:pb-32"
+    >
       <div className="absolute inset-0 -z-30 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
         <div
           className="absolute inset-0 opacity-5"
@@ -150,15 +154,6 @@ export const HeroSection = () => {
       <div className="container">
         {/* Container for the Image */}
         <div className="group relative mx-auto flex w-fit flex-col items-center justify-center">
-          {/* Image with hover behavior */}
-          <Image
-            onClick={handleResumeDownload}
-            className="group size-24 hover:cursor-pointer"
-            src="/exp2.svg"  // Changed from memojiImage to SVG path
-            alt="Experience illustration"
-            width={96}      // Added width (required for Next.js Image)
-            height={96}     // Added height (required for Next.js Image)
-          />
           {/* <Image
                 onClick={handleResumeDownload}
                 className="group size-24 hover:cursor-pointer"
@@ -166,10 +161,25 @@ export const HeroSection = () => {
                 alt="Person Looking at the laptop"
               />*/}
 
-          {/* Tooltip */}
-          <span className="absolute top-2 ml-12 hidden translate-x-1/2 transform rounded-3xl rounded-bl-none bg-black px-2 py-1 text-xs font-medium text-white group-hover:block">
-            Download Resume
-          </span>
+          <div
+            onClick={handleResumeDownload}
+            className="group relative cursor-pointer"
+          >
+            <div className="rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 p-1 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl">
+              <Image
+                src={myimg}
+                alt="Profile"
+                width={175}
+                height={175}
+                className="h-44 w-44 rounded-full object-cover bg-gray-950"
+              />
+            </div>
+
+            <span className="absolute -right-20 top-2 hidden rounded-xl rounded-bl-none bg-black px-3 py-1 text-xs font-medium text-white shadow-lg group-hover:block">
+              Download Resume
+            </span>
+          </div>
+         
 
           {/* Availability Section */}
           <div className="inline-flex items-center gap-4 rounded-lg border border-gray-800 bg-gray-950 px-4 py-1.5">
